@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Geniuses Model Academy — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to main content</a>
+  <header class="header" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Geniuses Model Academy home">
+        <img src="./images/GMA logo.png" alt="logo" style="height:60px;width:100px"/>
+        <div class="site-title">Geniuses Model Academy</div>
+      </a>
+      <nav role="navigation">
+        <div class="nav-links">
+        <div class="nav-links">
+          <a href="index.html"class="cta">Home</a>
+          <a href="about.html">About</a>
+          <a href="admissions.html"> Admissions</a>
+          <a href="academics.html">Academics</a>
+          <a href="news-and-media.html">News and Media</a>
+          <a href="student-life.html">Student Life</a>
+          <a href="faculty.html">Faculty</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        </div>
+        <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="sidebar-menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="sidebar-menu" class="sidebar-menu">
+    <button id="close-menu" class="close-btn" aria-label="Close menu">✕</button>
+    <nav class="menu-links">
+      <a href="index.html" class="menu-link">Home</a>
+      <a href="about.html" class="menu-link">About</a>
+      <a href="academics.html" class="menu-link">Academics</a>
+      <a href="admissions.html" class="menu-link">Admissions</a>
+      <a href="student-life.html" class="menu-link">Student Life</a>
+      <a href="faculty.html" class="menu-link">Faculty</a>
+      <a href="news-and-media.html" class="menu-link">News & Media</a>
+      <a href="news.html" class="menu-link">News</a>
+      <a href="contact.html" class="menu-link">Contact</a>
+    </nav>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="header" role="banner"></header>
+
+    <main class="container page-top" id="main-content">
+        <style>
+          /* Enhanced Homepage Styles */
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          
+          @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(-20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+          }
+          
+          @keyframes slideInLeft { 
+            from { opacity: 0; transform: translateX(-50px); } 
+            to { opacity: 1; transform: translateX(0); } 
+          }
+          
+          @keyframes slideInRight { 
+            from { opacity: 0; transform: translateX(50px); } 
+            to { opacity: 1; transform: translateX(0); } 
+          }
+          
+          @keyframes fadeInUp { 
+            from { opacity: 0; transform: translateY(30px); } 
+            to { opacity: 1; transform: translateY(0); } 
+          }
+          
+          @keyframes scaleIn { 
+            from { opacity: 0; transform: scale(0.95); } 
+            to { opacity: 1; transform: scale(1); } 
+          }
+          
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+          }
+          
+          .home-section {
+            padding: 80px 40px;
+            animation: fadeInUp 0.8s ease-in;
+          }
+          
+          .home-section h2 {
+            font-size: 2.8rem;
+            color: #0a4f69;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+          }
+          
+          .home-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+          }
+          
+          .home-section p {
+            color: #555;
+            font-size: 1.1rem;
+            margin: 20px 0 30px;
+            line-height: 1.7;
+          }
+          
+          /* Hero Section */
+          .hero {
+            background: linear-gradient(135deg, #0a506981 0%, #16a08481 100%);
+            color: white;
+            padding: 100px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('./images/graduation\ season\ student\ silhouette_7609951.png');
+            pointer-events: none;
+          }
+          
+          .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 0.8s ease-in;
+          }
+          
+          .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          }
+          
+          .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+          }
+          
+          .hero-ctas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+          }
+          
+          .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+          }
+          
+          .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: scaleIn 0.6s ease-in-out;
+          }
+          
+          .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+          }
+          
+          .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+          }
+          
+          /* CTA Buttons */
+          .btn-large {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+          }
+          
+          .btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+          }
+          
+          .btn-large.secondary {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+          }
+          
+          /* Page Summary Cards */
+          .page-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+          }
+          
+          .page-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.6s ease-in;
+          }
+          
+          .page-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+          }
+          
+          .page-card-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+          }
+          
+          .page-card-body {
+            padding: 30px;
+          }
+          
+          .page-card h3 {
+            color: #0a4f69;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+          }
+          
+          .page-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+          }
+          
+          .feature-list {
+            list-style: none;
+            margin: 20px 0;
+          }
+          
+          .feature-list li {
+            color: #666;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+          }
+          
+          .feature-list li:last-child {
+            border-bottom: none;
+          }
+          
+          .feature-list li::before {
+            content: '✓ ';
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+          }
+          
+          .card-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+          }
+          
+          .card-link:hover {
+            color: #764ba2;
+            transform: translateX(5px);
+          }
+          
+          /* Features Section */
+          .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+          }
+          
+          .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+          }
+          
+          .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-left-color: #764ba2;
+          }
+          
+          .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+          }
+          
+          .feature-card h4 {
+            color: #0a4f69;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+          }
+          
+          .feature-card p {
+            color: #888;
+            font-size: 0.9rem;
+            margin: 0;
+          }
+          
+          /* Testimonials Carousel */
+          .testimonials-container {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 50px;
+            border-radius: 12px;
+            margin-top: 50px;
+          }
+          
+          .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+          }
+          
+          .testimonial-text {
+            color: #a4a2a2;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 15px;
+          }
+          
+          .testimonial-author {
+            color: #0a4f69;
+            font-weight: 600;
+          }
+          
+          /* Quick Actions */
+          .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+          }
+          
+          .action-btn {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #0a4f69;
+            font-weight: 600;
+          }
+          
+          .action-btn:hover {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            transform: translateY(-5px);
+          }
+          
+          .action-btn-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+          }
+          
+          /* Stats Grid */
+          .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+          }
+          
+          .metric-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: scaleIn 0.6s ease-in;
+          }
+          
+          .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+          }
+          
+          .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+          }
+          
+          .metric-label {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 10px;
+          }
+          
+          /* Responsive */
+          @media (max-width: 768px) {
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .home-section { padding: 50px 20px; }
+            .home-section h2 { font-size: 2rem; }
+            .page-summary-grid, .features-grid, .quick-actions, .metrics-grid { grid-template-columns: 1fr; }
+            .hero-ctas { grid-template-columns: 1fr; }
+          }
+        </style>
+
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Inspire Curiosity. Build Character. Transform Futures.</h1>
+            <p>Where Academic Excellence Meets Holistic Development</p>
+            <div class="hero-ctas">
+              <a href="admissions.html" class="btn-large">Apply Now</a>
+              <a href="about.html" class="btn-large secondary">Learn More</a>
+              <a href="news-and-media.html" class="btn-large secondary">Latest Updates</a>
+              <a href="contact.html" class="btn-large secondary">Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-box">
+                <span class="stat-number">28+</span>
+                <span class="stat-label">Years of Excellence</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">95%</span>
+                <span class="stat-label">Exam Success Rate</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">270+</span>
+                <span class="stat-label">Active Students</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">92%</span>
+                <span class="stat-label">University Placement</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="home-section">
+          <h2>Why Choose Geniuses Model Academy?</h2>
+          <p>We provide a transformative educational experience that balances rigorous academics with character development and creative exploration.</p>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎓</div>
+              <h4>World-Class Education</h4>
+              <p>Rigorous curriculum aligned with international standards, taught by certified experts committed to student success.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌟</div>
+              <h4>Holistic Development</h4>
+              <p>Whole-child education combining academics, character building, emotional intelligence, and personal growth.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🚀</div>
+              <h4>Innovation & Creativity</h4>
+              <p>Cutting-edge STEM programs, innovation labs, entrepreneurship tracks, and creative arts opportunities.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">👥</div>
+              <h4>Supportive Community</h4>
+              <p>Compassionate faculty, peer mentorship, counseling services, and a thriving student community of 50+ clubs.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🏆</div>
+              <h4>Track Record of Success</h4>
+              <p>92% university placement rate, national competition medals, research publications, and global recognition.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💻</div>
+              <h4>Digital Integration</h4>
+              <p>Modern e-learning platform, virtual classrooms, online library, and student management system for seamless learning.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Page Summaries -->
+        <section class="home-section">
+          <h2>Explore Our Academy</h2>
+          <p>Discover everything Geniuses Model Academy has to offer across academics, student life, admissions, and more.</p>
+          
+          <div class="page-summary-grid">
+            <!-- About Page -->
+            <div class="page-card">
+              <div class="page-card-header">📖</div>
+              <div class="page-card-body">
+                <h3>About Us</h3>
+                <p>Learn our mission, vision, history, and values that drive everything we do at Geniuses Model Academy.</p>
+                <ul class="feature-list">
+                  <li>Institutional mission & values</li>
+                  <li>28 years of academic heritage</li>
+                  <li>Leadership & governance structure</li>
+                  <li>Awards & accreditations</li>
+                  <li>Strategic vision for future</li>
+                </ul>
+                <a href="about.html" class="card-link">Explore About →</a>
+              </div>
+            </div>
+
+            <!-- Academics Page -->
+            <div class="page-card">
+              <div class="page-card-header">📚</div>
+              <div class="page-card-body">
+                <h3>Academics</h3>
+                <p>Comprehensive curriculum across STEM, Arts & Humanities, and Entrepreneurship with expert instruction and real-world learning.</p>
+                <ul class="feature-list">
+                  <li>STEM Scholars program</li>
+                  <li>Arts & Humanities pathways</li>
+                  <li>Entrepreneurship track</li>
+                  <li>Research opportunities</li>
+                  <li>Innovation labs & competitions</li>
+                </ul>
+                <a href="academics.html" class="card-link">View Programs →</a>
+              </div>
+            </div>
+
+            <!-- Student Life Page -->
+            <div class="page-card">
+              <div class="page-card-header">🎯</div>
+              <div class="page-card-body">
+                <h3>Student Life</h3>
+                <p>Rich campus experience with 50+ clubs, sports programs, arts, leadership opportunities, and comprehensive support services.</p>
+                <ul class="feature-list">
+                  <li>50+ student clubs & societies</li>
+                  <li>Competitive sports programs</li>
+                  <li>Arts & cultural festivals</li>
+                  <li>Leadership development</li>
+                  <li>Counseling & wellness services</li>
+                </ul>
+                <a href="student-life.html" class="card-link">Discover Campus Life →</a>
+              </div>
+            </div>
+
+            <!-- Admissions Page -->
+            <div class="page-card">
+              <div class="page-card-header">✨</div>
+              <div class="page-card-body">
+                <h3>Admissions</h3>
+                <p>Simple, transparent admissions process with merit-based scholarships and need-based financial aid options available.</p>
+                <ul class="feature-list">
+                  <li>Online application portal</li>
+                  <li>Merit-based scholarships</li>
+                  <li>Need-based financial aid</li>
+                  <li>Flexible payment plans</li>
+                  <li>Quick decision timeline</li>
+                </ul>
+                <a href="admissions.html" class="card-link">Apply Now →</a>
+              </div>
+            </div>
+
+            <!-- News & Media Page -->
+            <div class="page-card">
+              <div class="page-card-header">📰</div>
+              <div class="page-card-body">
+                <h3>News & Media</h3>
+                <p>Stay updated with latest news, achievements, events, press releases, and media coverage of Geniuses Model Academy.</p>
+                <ul class="feature-list">
+                  <li>Latest news & announcements</li>
+                  <li>Student achievements</li>
+                  <li>Featured stories carousel</li>
+                  <li>Press releases & media</li>
+                  <li>Event coverage & highlights</li>
+                </ul>
+                <a href="news-and-media.html" class="card-link">Read News →</a>
+              </div>
+            </div>
+
+            <!-- Faculty Page -->
+            <div class="page-card">
+              <div class="page-card-header">👨‍🏫</div>
+              <div class="page-card-body">
+                <h3>Faculty & Staff</h3>
+                <p>Meet our dedicated team of certified educators, counselors, and support staff committed to your success.</p>
+                <ul class="feature-list">
+                  <li>165+ certified educators</li>
+                  <li>Subject-matter experts</li>
+                  <li>Counseling & support team</li>
+                  <li>Professional development</li>
+                  <li>Research-active faculty</li>
+                </ul>
+                <a href="faculty.html" class="card-link">Meet Faculty →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Institutional Metrics -->
+        <section class="home-section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));">
+          <h2>By The Numbers</h2>
+          <p>Proven excellence in academics, student outcomes, and institutional growth over 10 years.</p>
+          
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-number" data-target="270" data-suffix=""> 270 </span>
+              <span class="metric-label">Current Students Enrolled</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="20" data-suffix="+">165+</span>
+              <span class="metric-label">Certified Teaching Staff</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="25" data-suffix="+">120+</span>
+              <span class="metric-label">Students Graduate Annually</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="92" data-suffix="%">95%</span>
+              <span class="metric-label">External Exam Success Rate</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="95" data-suffix="%">92%</span>
+              <span class="metric-label">University Placement Rate</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="10" data-suffix="+">50+</span>
+              <span class="metric-label">Active Clubs & Societies</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="home-section">
+          <h2>Take Your Next Step</h2>
+          <p>Whether you're a prospective student, parent, or alumni, we're here to help and support you.</p>
+          
+          <div class="quick-actions">
+            <a href="admissions.html" class="action-btn">
+              <span class="action-btn-icon">📝</span>
+              <span>Apply for Admission</span>
+            </a>
+            <a href="/schedule-visit" class="action-btn">
+              <span class="action-btn-icon">🏫</span>
+              <span>Schedule Campus Visit</span>
+            </a>
+            <a href="assets/prospectus.pdf" class="action-btn">
+              <span class="action-btn-icon">📚</span>
+              <span>Download Prospectus</span>
+            </a>
+            <a href="/portal" class="action-btn">
+              <span class="action-btn-icon">🔐</span>
+              <span>Student/Parent Portal</span>
+            </a>
+            <a href="contact.html" class="action-btn">
+              <span class="action-btn-icon">💬</span>
+              <span>Contact Us</span>
+            </a>
+            <a href="news-and-media.html" class="action-btn">
+              <span class="action-btn-icon">🔔</span>
+              <span>View Latest News</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="home-section">
+          <h2>What Our Community Says</h2>
+          <p>Hear from students, parents, alumni, and faculty about their experiences at Geniuses Model Academy.</p>
+          
+          <div class="testimonials-container">
+            <div class="testimonial-card">
+              <div class="testimonial-text">"The faculty at GMA didn't just teach me academics—they shaped who I am as a person. The supportive environment and focus on character development made all the difference."</div>
+              <div class="testimonial-author">— Sarah M., Student</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-text">"I'm amazed by how well-rounded my child has become. From academic excellence to leadership skills to creative expression, GMA truly develops the whole child."</div>
+              <div class="testimonial-author">— Mr. & Mrs. Okonkwo, Parents</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-text">"GMA's alumni network has been invaluable. The connections I made and skills I developed have directly contributed to my success in university and beyond."</div>
+              <div class="testimonial-author">— Chisom O., Alumni</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-text">"Working at GMA is fulfilling. The school's commitment to excellence and student welfare creates an environment where both students and teachers thrive together."</div>
+              <div class="testimonial-author">— Prof. Adeyemi, Faculty</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1.9 Footer: Institutional Authority Base -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-section">
+            <h3>About Academy</h3>
+            <p>Geniuses Model Academy is an academically rigorous preparatory school committed to nurturing curiosity, creativity, and leadership in every student.</p>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><img src="./images/Instagram.png" alt="Instagram"></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><img src="images/x.svg" alt="X (Twitter)"></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="news-and-media.html">News and Media</a></li>
+              <li><a href="student-life.html">Student Life</a></li>
+              <li><a href="faculty.html">Faculty & Staff</a></li>
+              <li><a href="news.html">News & Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Academic Programs -->
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="academics.html#stem">STEM</a></li>
+              <li><a href="academics.html#arts">Arts & Humanities</a></li>
+              <li><a href="academics.html#entrepreneurship">Entrepreneurship</a></li>
+              <li><a href="academics.html#research">Student Research</a></li>
+              <li><a href="academics.html#lab">Innovation Lab</a></li>
+              <li><a href="academics.html#internships">Internships</a></li>
+              <li><a href="academics.html#abroad">Study Abroad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact & Connect -->
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <div class="contact-info">
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 12c-6.6 0-12 5.4-12 12 0 10 12 20 12 20s12-10 12-20c0-6.6-5.4-12-12-12zm0 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/></svg><span>123 Academy Lane, Education City, ST 12345, USA</span></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M36 12h-5.5l-2.5-3h-5l-2.5 3H12c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V14c0-1.1-.9-2-2-2zm-12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg><a href="tel:+1234567890" style="color:rgba(255,255,255,0.8);text-decoration:none">(123) 456-7890</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M8 8h32c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4zm16 13l-12-8v0h24l-12 8z" fill-rule="evenodd"/><path d="M8 11l12 8 12-8" fill="none" stroke="#fff" stroke-width="2"/></svg><a href="mailto:info@geniusesacademy.edu" style="color:rgba(255,255,255,0.8);text-decoration:none">info@geniusesacademy.edu</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 2C12.95 2 4 10.95 4 22c0 3.8.9 7.4 2.4 10.6.15.35.1.75-.15 1.05l-3 5.4c-.75 1.35.15 2.85 1.65 2.85.4 0 .8-.1 1.2-.3l5.4-3c.35-.25.8-.3 1.2-.15C15.1 42.1 19.4 43 24 43c11.05 0 20-8.95 20-20S35.05 2 24 2zm10.5 20c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg><a href="https://wa.me/1234567890" target="_blank" style="color:rgba(255,255,255,0.8);text-decoration:none">WhatsApp Chat <a href="#"> +234-903-820-6194</a></div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get updates on admissions, events, and achievements.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!')">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Geniuses Model Academy. All rights reserved. | "Inspire Curiosity. Build Character. Transform Futures."</p>
+          <div class="footer-bottom-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  </div>
+
+  <script src="js/scripts.js"></script>
+
+  <script>
+    // Simple counter animation for metrics
+    document.addEventListener('DOMContentLoaded', function(){
+          const counters = document.querySelectorAll('.metric-number');
+          counters.forEach(el=>{
+            const target = +el.dataset.target;
+            const suffix = el.dataset.suffix || '';
+            let r = 0;
+            const step = Math.ceil(target/100);
+            const t = setInterval(()=>{
+              r += step;
+              if(r >= target){ el.textContent = target + suffix; clearInterval(t); }
+              else el.textContent = r;
+            }, 12);
+          });
+
+          // Mobile menu toggle
+          const mb = document.getElementById('mobile-menu-btn');
+          if(mb) mb.addEventListener('click', ()=>{
+            const expanded = mb.getAttribute('aria-expanded') === 'true';
+            mb.setAttribute('aria-expanded', String(!expanded));
+            document.body.classList.toggle('mobile-open');
+          });
+    });
+  </script>
+
+  <script src="js/menu.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ac70a17b5553192276c90f/1jdtt9fhn';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  });
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

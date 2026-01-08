@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Geniuses Model Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="nav-inner">
+     <a href="index.html" class="logo" aria-label="Geniuses Model Academy home">
+        <img src="./images/GMA logo.png" alt="logo" style="height:60px;width:100px"/>
+        <div class="site-title">Geniuses Model Academy</div>
+      </a>
+      <nav>
+        <div class="nav-links">
+         <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="cta">About</a>
+          <a href="admissions.html"> Admissions</a>
+          <a href="academics.html">Academics</a>
+          <a href="news-and-media.html">News and Media</a>
+          <a href="student-life.html">Student Life</a>
+          <a href="faculty.html">Faculty</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        </div>
+        <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="sidebar-menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="sidebar-menu" class="sidebar-menu">
+    <button id="close-menu" class="close-btn" aria-label="Close menu">✕</button>
+    <nav class="menu-links">
+      <a href="index.html" class="menu-link">Home</a>
+      <a href="about.html" class="menu-link">About</a>
+      <a href="academics.html" class="menu-link">Academics</a>
+      <a href="admissions.html" class="menu-link">Admissions</a>
+      <a href="student-life.html" class="menu-link">Student Life</a>
+      <a href="faculty.html" class="menu-link">Faculty</a>
+      <a href="news-and-media.html" class="menu-link">News & Media</a>
+      <a href="news.html" class="menu-link">News</a>
+      <a href="contact.html" class="menu-link">Contact</a>
+    </nav>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="header" role="banner"></header>
+
+    <main class="container page-top">
+    <section class="card">
+      <h1>About Geniuses Model Academy</h1>
+      <p class="lead">Committed to developing exceptional thinkers and leaders.</p>
+      <p>Founded as a center for gifted education, Geniuses Model Academy combines a challenging curriculum with comprehensive student support. We emphasize project-based learning, interdisciplinary study, and mentorship programs that connect students with industry and research partners.</p>
+      <p>Accreditations, awards, and partnerships support our mission and ensure continuous improvement across academics and student services.</p>
+    </section>
+
+    <section style="padding: 80px 40px; background: linear-gradient(135deg, rgba(79, 172, 254, 0.05), rgba(0, 242, 254, 0.05));">
+      <style>
+        .carousel-container { position: relative; max-width: 1000px; margin: 0 auto; overflow: hidden; border-radius: 12px; }
+        .carousel-slides { display: flex; position: relative; height: 300px; }
+        .carousel-slide { display: none; width: 100%; padding: 50px 40px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; animation: fadeIn 0.8s ease-in; position: relative; }
+        .carousel-slide.active { display: block; }
+        .carousel-slide h3 { font-size: 2rem; margin-bottom: 15px; font-weight: 700; }
+        .carousel-slide p { font-size: 1.1rem; line-height: 1.6; opacity: 0.95; }
+        .carousel-controls { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
+        .carousel-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; }
+        .carousel-dot.active { background: white; transform: scale(1.2); }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 45px; height: 45px; background: rgba(255,255,255,0.3); border: none; color: white; font-size: 24px; cursor: pointer; border-radius: 50%; transition: all 0.3s; z-index: 5; }
+        .carousel-btn:hover { background: rgba(255,255,255,0.6); }
+        .carousel-btn.prev { left: 20px; }
+        .carousel-btn.next { right: 20px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @media (max-width: 768px) { .carousel-slide { padding: 30px 20px; height: auto; } .carousel-slide h3 { font-size: 1.5rem; } .carousel-slide p { font-size: 0.95rem; } }
+      </style>
+      <h2 style="text-align: center; color: #0a4f69; font-size: 2.8rem; margin-bottom: 40px;">Our Journey & Milestones</h2>
+      <div class="carousel-container">
+        <div class="carousel-slides" id="aboutCarousel">
+          <div class="carousel-slide active">
+            <img src="" alt="Carousel image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+            <div style="position: relative; z-index: 2;">
+              <h3>🏫 Founded in 2010</h3>
+              <p>Established as a center for gifted education with a commitment to nurturing exceptional thinkers and leaders through inquiry-driven pedagogy and holistic development.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="" alt="Carousel image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+            <div style="position: relative; z-index: 2;">
+              <h3>📈 2015 Campus Expansion</h3>
+              <p>Expanded our physical infrastructure and academic offerings to accommodate growing student enrollment and introduce specialized STEM and Arts facilities.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="" alt="Carousel image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+            <div style="position: relative; z-index: 2;">
+              <h3>🔬 STEM Wing Launch 2018</h3>
+              <p>Opened state-of-the-art Science, Technology, Engineering, and Mathematics wing with advanced laboratories and innovation spaces for student research.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="" alt="Carousel image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+            <div style="position: relative; z-index: 2;">
+              <h3>🌍 International Exchange 2022</h3>
+              <p>Launched international student exchange programs, fostering global citizenship and cross-cultural understanding among our student body.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="" alt="Carousel image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+            <div style="position: relative; z-index: 2;">
+              <h3>🏆 Continuous Recognition</h3>
+              <p>Received multiple national academic awards, successful accreditation renewals, and recognition as a leader in innovative education and student development.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" onclick="changeAboutSlide(-1)">❮</button>
+        <button class="carousel-btn next" onclick="changeAboutSlide(1)">❯</button>
+        <div class="carousel-controls" id="aboutDots"></div>
+      </div>
+      <script>
+        let aboutCurrentSlide = 0;
+        const aboutSlides = document.querySelectorAll('#aboutCarousel .carousel-slide');
+        const aboutSlideCount = aboutSlides.length;
+        function initAboutCarousel() { for(let i=0; i<aboutSlideCount; i++) { const dot = document.createElement('div'); dot.className = 'carousel-dot' + (i===0?' active':''); dot.onclick = ()=>goToAboutSlide(i); document.getElementById('aboutDots').appendChild(dot); } setInterval(()=>changeAboutSlide(1), 6000); }
+        function changeAboutSlide(n) { goToAboutSlide(aboutCurrentSlide + n); }
+        function goToAboutSlide(n) { aboutCurrentSlide = (n + aboutSlideCount) % aboutSlideCount; aboutSlides.forEach(s=>s.classList.remove('active')); document.querySelectorAll('#aboutDots .carousel-dot').forEach(d=>d.classList.remove('active')); aboutSlides[aboutCurrentSlide].classList.add('active'); document.querySelectorAll('#aboutDots .carousel-dot')[aboutCurrentSlide].classList.add('active'); }
+        document.addEventListener('DOMContentLoaded', initAboutCarousel);
+      </script>
+    </section>
+
+    <section id="governance" class="card governance">
+      <h2>Strategic Institutional Identity & Governance Framework</h2>
+      <p class="lead">This section functions as the school's credibility dossier — leadership, governance, accreditation and institutional transparency.</p>
+
+      <div class="gov-grid">
+        <div class="gov-main">
+          <div class="gov-intro">
+            <p>Below are organized sections covering institutional overview, leadership and governance, faculty & staff, accreditations, campus facilities, culture, strategy and public transparency resources.</p>
+          </div>
+
+          <div class="accordion-group" id="gov-accordion">
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.1 Institutional Overview — Founding & Profile</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Founding & Historical Profile</h3>
+                <ul>
+                  <li><strong>Year of establishment:</strong> 2010</li>
+                  <li><strong>Founding philosophy:</strong> Nurture gifted learners through inquiry-driven pedagogy.</li>
+                  <li><strong>Growth milestones:</strong> Campus expansion 2015, STEM Wing 2018, International exchange 2022.</li>
+                  <li><strong>Key achievements:</strong> National academic awards; accreditation renewals.</li>
+                </ul>
+                <h4>Mission, Vision & Core Values</h4>
+                <p><strong>Mission:</strong> To inspire curiosity and develop ethical leaders through rigorous and inclusive learning.</p>
+                <p><strong>Vision:</strong> A global learning community where every student achieves their potential.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.2 Leadership & Governance</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Proprietor / Founder’s Message</h3>
+                <p>Our leadership is committed to educational excellence, transparency and continuous improvement.</p>
+                <h4>Governing Board & Management Council</h4>
+                <p>Board of trustees profiles, executive management team and governance policies are available for public review.</p>
+                <ul>
+                  <li><a href="#board">Board Member Profiles (download)</a></li>
+                  <li><a href="#policies">Governance Policies & Strategic Committees</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.3 Faculty & Staff Directory</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Academic Personnel</h3>
+                <p>Profiles include qualifications, subject specializations, experience and professional affiliations.</p>
+                <p><a href="faculty.html">Browse the full Faculty & Staff directory</a></p>
+                <h4>Recruitment & Career Opportunities</h4>
+                <p>See current openings and application portal for teaching and administrative roles.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.4 Accreditation, Compliance & Legitimacy</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Accreditations & Certificates</h3>
+                <ul>
+                  <li>National Accreditation Board — Accredited (2024)</li>
+                  <li>International Education Standards — Recognized partner</li>
+                </ul>
+                <h4>Policies & Regulatory Documents</h4>
+                <p><a href="#policies">Download: Academic Policy, Admissions Policy, Child Protection Policy, Data Privacy Policy</a></p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.5 Campus & Facilities Profile</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Physical Infrastructure & Resources</h3>
+                <ul>
+                  <li>Science & Technology Laboratories</li>
+                  <li>Library & Research Center</li>
+                  <li>Sports & Arts Complex</li>
+                  <li>Residential Hostels & Cafeteria</li>
+                </ul>
+                <h4>Digital Learning</h4>
+                <p>Smart classrooms, LMS and virtual labs are integrated into the curriculum.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.6 Institutional Culture & Community</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Culture & Engagement</h3>
+                <p>Student conduct, community engagement projects, parent partnerships and alumni programs are active components of institutional life.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.7 Strategic Development & Future Growth</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Strategic Roadmap</h3>
+                <p>Strategic plan, innovation initiatives, international collaborations and sustainability programs guide growth and quality assurance.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">2.8 Transparency & Public Information Hub</button>
+              <div class="accordion-panel" role="region" aria-hidden="true">
+                <h3>Public Records & Reports</h3>
+                <ul>
+                  <li><a href="#">Annual Reports</a></li>
+                  <li><a href="#">Academic Performance Reports</a></li>
+                  <li><a href="#">Inspection Results</a></li>
+                  <li><a href="#">Official Prospectus & Publications Archive</a></li>
+                </ul>
+                <p>For formal requests and copies of institutional documents contact <a href="mailto:info@geniusesacademy.edu">info@geniusesacademy.edu</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="gov-aside">
+          <div class="card org-card">
+            <h3>Leadership & Org Chart</h3>
+            <p class="muted">Executive management & governance overview</p>
+            <div class="org-chart" id="orgChart" aria-hidden="false">
+              <img src="assets/org-chart.svg" alt="Organizational chart" onerror="this.style.display='none'">
+              <p class="small">Click to expand profiles</p>
+            </div>
+            <div class="gov-links">
+              <a href="#board" class="btn outline">Board Profiles</a>
+              <a href="#policies" class="btn">Governance Policies</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-section">
+            <h3>About Academy</h3>
+            <p>Geniuses Model Academy is an academically rigorous preparatory school committed to nurturing curiosity, creativity, and leadership in every student.</p>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><img src="./images/Instagram.png" alt="Instagram"></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><img src="images/x.svg" alt="X (Twitter)"></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="news-and-media.html">News and Media</a></li>
+              <li><a href="student-life.html">Student Life</a></li>
+              <li><a href="faculty.html">Faculty & Staff</a></li>
+              <li><a href="news.html">News & Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Academic Programs -->
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="academics.html#stem">STEM</a></li>
+              <li><a href="academics.html#arts">Arts & Humanities</a></li>
+              <li><a href="academics.html#entrepreneurship">Entrepreneurship</a></li>
+              <li><a href="academics.html#research">Student Research</a></li>
+              <li><a href="academics.html#lab">Innovation Lab</a></li>
+              <li><a href="academics.html#internships">Internships</a></li>
+              <li><a href="academics.html#abroad">Study Abroad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact & Connect -->
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <div class="contact-info">
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 12c-6.6 0-12 5.4-12 12 0 10 12 20 12 20s12-10 12-20c0-6.6-5.4-12-12-12zm0 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/></svg><span>123 Academy Lane, Education City, ST 12345, USA</span></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M36 12h-5.5l-2.5-3h-5l-2.5 3H12c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V14c0-1.1-.9-2-2-2zm-12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg><a href="tel:+1234567890" style="color:rgba(255,255,255,0.8);text-decoration:none">(123) 456-7890</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M8 8h32c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4zm16 13l-12-8v0h24l-12 8z" fill-rule="evenodd"/><path d="M8 11l12 8 12-8" fill="none" stroke="#fff" stroke-width="2"/></svg><a href="mailto:info@geniusesacademy.edu" style="color:rgba(255,255,255,0.8);text-decoration:none">info@geniusesacademy.edu</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 2C12.95 2 4 10.95 4 22c0 3.8.9 7.4 2.4 10.6.15.35.1.75-.15 1.05l-3 5.4c-.75 1.35.15 2.85 1.65 2.85.4 0 .8-.1 1.2-.3l5.4-3c.35-.25.8-.3 1.2-.15C15.1 42.1 19.4 43 24 43c11.05 0 20-8.95 20-20S35.05 2 24 2zm10.5 20c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg><a href="https://wa.me/1234567890" target="_blank" style="color:rgba(255,255,255,0.8);text-decoration:none">WhatsApp Chat</a></div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get updates on admissions, events, and achievements.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!')">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Geniuses Model Academy. All rights reserved. | "Inspire Curiosity. Build Character. Transform Futures."</p>
+          <div class="footer-bottom-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ac70a17b5553192276c90f/1jdtt9fhn';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Geniuses Model Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="nav-inner">
+ <a href="index.html" class="logo" aria-label="Geniuses Model Academy home">
+        <img src="./images/GMA logo.png" alt="logo" style="height:60px;width:100px"/>
+        <div class="site-title">Geniuses Model Academy</div>
+      </a>
+      <nav>
+        <div class="nav-links">
+         <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="admissions.html"> Admissions</a>
+          <a href="academics.html">Academics</a>
+          <a href="news-and-media.html">News and Media</a>
+          <a href="student-life.html">Student Life</a>
+          <a href="faculty.html">Faculty</a>
+          <a href="news.html">News</a>
+          <a href="contact.html"class="cta">Contact</a>
+        </div>
+        </div>
+        <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="sidebar-menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="sidebar-menu" class="sidebar-menu">
+    <button id="close-menu" class="close-btn" aria-label="Close menu">✕</button>
+    <nav class="menu-links">
+      <a href="index.html" class="menu-link">Home</a>
+      <a href="about.html" class="menu-link">About</a>
+      <a href="academics.html" class="menu-link">Academics</a>
+      <a href="admissions.html" class="menu-link">Admissions</a>
+      <a href="student-life.html" class="menu-link">Student Life</a>
+      <a href="faculty.html" class="menu-link">Faculty</a>
+      <a href="news-and-media.html" class="menu-link">News & Media</a>
+      <a href="news.html" class="menu-link">News</a>
+      <a href="contact.html" class="menu-link">Contact</a>
+    </nav>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="header" role="banner"></header>
+
+    <main class="container page-top">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+      
+      .page-hero { background: linear-gradient(135deg, #0a4f69 0%, #16a085 100%); color: white; padding: 80px 40px; text-align: center; animation: fadeIn 0.8s ease-in; }
+      .page-hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; }
+      .page-hero p { font-size: 1.3rem; opacity: 0.95; }
+      
+      .page-section { padding: 80px 40px; animation: fadeInUp 0.8s ease-in; }
+      .page-section h2 { font-size: 2.8rem; color: #0a4f69; margin-bottom: 15px; position: relative; display: inline-block; }
+      .page-section h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 2px; }
+      .page-section p { color: #555; font-size: 1.1rem; margin: 20px 0 30px; line-height: 1.7; }
+      
+      .contact-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+      .contact-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; animation: fadeInUp 0.6s ease-in; }
+      .contact-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+      
+      .contact-card h3 { color: #0a4f69; font-size: 1.4rem; margin-bottom: 15px; }
+      .contact-card p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+      .contact-card a { color: #667eea; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+      .contact-card a:hover { color: #764ba2; text-decoration: underline; }
+      
+      .dept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
+      .dept-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #667eea; transition: all 0.3s ease; }
+      .dept-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+      .dept-card h4 { color: #0a4f69; font-size: 1.1rem; margin-bottom: 10px; }
+      .dept-card p { color: #666; font-size: 0.9rem; }
+      
+      .form-section { background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); padding: 80px 40px; margin-top: 40px; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; max-width: 900px; margin-top: 40px; }
+      .form-group { display: flex; flex-direction: column; }
+      .form-group label { color: #0a4f69; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; }
+      .form-group input, .form-group select, .form-group textarea { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem; font-family: inherit; transition: border-color 0.3s; }
+      .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #667eea; }
+      .form-group textarea { grid-column: 1 / -1; resize: vertical; min-height: 140px; }
+      .form-group button { grid-column: 1 / -1; padding: 14px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s; }
+      .form-group button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3); }
+      
+      @media (max-width: 768px) { .page-hero { padding: 60px 20px; } .page-hero h1 { font-size: 2rem; } .page-section { padding: 50px 20px; } .form-grid { grid-template-columns: 1fr; } .contact-info-grid { grid-template-columns: 1fr; } .dept-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <section class="page-hero">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you! Reach out with any questions, feedback, or inquiries</p>
+    </section>
+
+    <section class="page-section">
+      <h2>Contact Information</h2>
+      <p>Multiple ways to connect with Geniuses Model Academy for inquiries and support.</p>
+      
+      <div class="contact-info-grid">
+        <div class="contact-card">
+          <h3>📍 Main Campus Address</h3>
+          <p><strong>Geniuses Model Academy</strong></p>
+          <p>123 Excellence Avenue<br>Education District<br>Lagos, Nigeria 100001</p>
+          <p style="margin-top: 15px; font-size: 0.85rem; color: #999;">Open Monday - Friday: 8:00 AM - 4:00 PM</p>
+        </div>
+        
+        <div class="contact-card">
+          <h3>📞 Phone & WhatsApp</h3>
+          <p><strong>Main Reception:</strong><br><a href="tel:+2341234567890">+234 (123) 456-7890</a></p>
+          <p style="margin-top: 15px;"><strong>WhatsApp Line:</strong><br><a href="https://wa.me/2341234567890">+234 123 456-7890</a></p>
+        </div>
+        
+        <div class="contact-card">
+          <h3>✉️ Email</h3>
+          <p><strong>General Inquiries:</strong><br><a href="mailto:info@geniusesacademy.edu">info@geniusesacademy.edu</a></p>
+          <p style="margin-top: 15px;"><strong>Support:</strong><br><a href="mailto:support@geniusesacademy.edu">support@geniusesacademy.edu</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>Department Contacts</h2>
+      <p>Reach out to specific departments for targeted assistance and information.</p>
+      
+      <div class="dept-grid">
+        <div class="dept-card">
+          <h4>📋 Admissions Office</h4>
+          <p><strong>Email:</strong> <a href="mailto:admissions@geniusesacademy.edu" style="color: #667eea;">admissions@geniusesacademy.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+2341234567890" style="color: #667eea;">+234 (123) 456-7801</a></p>
+          <p style="margin-top: 10px; font-size: 0.85rem;">Application support and enrollment inquiries</p>
+        </div>
+        
+        <div class="dept-card" style="border-left-color: #764ba2;">
+          <h4>📚 Academic Affairs</h4>
+          <p><strong>Email:</strong> <a href="mailto:academics@geniusesacademy.edu" style="color: #764ba2;">academics@geniusesacademy.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+2341234567890" style="color: #764ba2;">+234 (123) 456-7802</a></p>
+          <p style="margin-top: 10px; font-size: 0.85rem;">Curriculum, grading, and academic support</p>
+        </div>
+        
+        <div class="dept-card" style="border-left-color: #667eea;">
+          <h4>🎯 Student Services</h4>
+          <p><strong>Email:</strong> <a href="mailto:students@geniusesacademy.edu" style="color: #667eea;">students@geniusesacademy.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+2341234567890" style="color: #667eea;">+234 (123) 456-7803</a></p>
+          <p style="margin-top: 10px; font-size: 0.85rem;">Student life, clubs, and activities</p>
+        </div>
+        
+        <div class="dept-card" style="border-left-color: #764ba2;">
+          <h4>💰 Finance & Accounts</h4>
+          <p><strong>Email:</strong> <a href="mailto:finance@geniusesacademy.edu" style="color: #764ba2;">finance@geniusesacademy.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+2341234567890" style="color: #764ba2;">+234 (123) 456-7804</a></p>
+          <p style="margin-top: 10px; font-size: 0.85rem;">Fees, payments, and financial inquiries</p>
+        </div>
+        
+        <div class="dept-card" style="border-left-color: #667eea;">
+          <h4>⚽ Sports & Athletics</h4>
+          <p><strong>Email:</strong> <a href="mailto:sports@geniusesacademy.edu" style="color: #667eea;">sports@geniusesacademy.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+2341234567890" style="color: #667eea;">+234 (123) 456-7805</a></p>
+          <p style="margin-top: 10px; font-size: 0.85rem;">Athletic programs and extracurricular sports</p>
+        </div>
+        
+        <div class="dept-card" style="border-left-color: #764ba2;">
+          <h4>📡 Public Relations & Media</h4>
+          <p><strong>Email:</strong> <a href="mailto:pr@geniusesacademy.edu" style="color: #764ba2;">pr@geniusesacademy.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+2341234567890" style="color: #764ba2;">+234 (123) 456-7806</a></p>
+          <p style="margin-top: 10px; font-size: 0.85rem;">Media inquiries and press releases</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="container">
+        <h2 style="color: #0a4f69; font-size: 2.8rem; position: relative; display: inline-block;">Send us a Message</h2>
+        <div style="position: absolute; bottom: -15px; left: 0; width: 60px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 2px; margin-top: 15px;"></div>
+        <p style="color: #555; font-size: 1.1rem; margin: 50px 0 30px; line-height: 1.7;">Fill out the form below and we'll respond within 24 hours</p>
+        
+        <form class="form-grid" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject...</option>
+              <option value="admissions">Admissions Inquiry</option>
+              <option value="academics">Academic Inquiry</option>
+              <option value="sports">Sports/Clubs</option>
+              <option value="general">General Question</option>
+              <option value="events">Events</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        alert(`Thank you, ${name}! Your message has been sent successfully. We'll respond within 24 hours.`);
+        event.target.reset();
+      }
+    </script>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-section">
+            <h3>About Academy</h3>
+            <p>Geniuses Model Academy is an academically rigorous preparatory school committed to nurturing curiosity, creativity, and leadership in every student.</p>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><img src="./images/Instagram.png" alt="Instagram"></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><img src="images/x.svg" alt="X (Twitter)"></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="news-and-media.html">News and Media</a></li>
+              <li><a href="student-life.html">Student Life</a></li>
+              <li><a href="faculty.html">Faculty & Staff</a></li>
+              <li><a href="news.html">News & Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Academic Programs -->
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="academics.html#stem">STEM</a></li>
+              <li><a href="academics.html#arts">Arts & Humanities</a></li>
+              <li><a href="academics.html#entrepreneurship">Entrepreneurship</a></li>
+              <li><a href="academics.html#research">Student Research</a></li>
+              <li><a href="academics.html#lab">Innovation Lab</a></li>
+              <li><a href="academics.html#internships">Internships</a></li>
+              <li><a href="academics.html#abroad">Study Abroad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact & Connect -->
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <div class="contact-info">
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 12c-6.6 0-12 5.4-12 12 0 10 12 20 12 20s12-10 12-20c0-6.6-5.4-12-12-12zm0 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/></svg><span>123 Academy Lane, Education City, ST 12345, USA</span></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M36 12h-5.5l-2.5-3h-5l-2.5 3H12c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V14c0-1.1-.9-2-2-2zm-12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg><a href="tel:+1234567890" style="color:rgba(255,255,255,0.8);text-decoration:none">(123) 456-7890</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M8 8h32c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4zm16 13l-12-8v0h24l-12 8z" fill-rule="evenodd"/><path d="M8 11l12 8 12-8" fill="none" stroke="#fff" stroke-width="2"/></svg><a href="mailto:info@geniusesacademy.edu" style="color:rgba(255,255,255,0.8);text-decoration:none">info@geniusesacademy.edu</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 2C12.95 2 4 10.95 4 22c0 3.8.9 7.4 2.4 10.6.15.35.1.75-.15 1.05l-3 5.4c-.75 1.35.15 2.85 1.65 2.85.4 0 .8-.1 1.2-.3l5.4-3c.35-.25.8-.3 1.2-.15C15.1 42.1 19.4 43 24 43c11.05 0 20-8.95 20-20S35.05 2 24 2zm10.5 20c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg><a href="https://wa.me/1234567890" target="_blank" style="color:rgba(255,255,255,0.8);text-decoration:none">WhatsApp Chat</a></div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get updates on admissions, events, and achievements.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!')">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Geniuses Model Academy. All rights reserved. | "Inspire Curiosity. Build Character. Transform Futures."</p>
+          <div class="footer-bottom-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ac70a17b5553192276c90f/1jdtt9fhn';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

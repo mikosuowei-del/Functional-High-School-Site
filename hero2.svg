@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#07243F"/>
+  <circle cx="1300" cy="200" r="140" fill="#0b66ff" opacity="0.12"/>
+  <text x="80" y="220" font-family="Inter,Arial" font-size="56" fill="#fff">Discover Our Programs</text>
+  <text x="80" y="300" font-family="Inter,Arial" font-size="28" fill="#cfe3ff">STEM • Arts • Humanities • Entrepreneurship</text>
+</svg>

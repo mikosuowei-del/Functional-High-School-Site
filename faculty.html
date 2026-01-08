@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Faculty — Geniuses Model Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Geniuses Model Academy home">
+        <img src="./images/GMA logo.png" alt="logo" style="height:60px;width:100px"/>
+        <div class="site-title">Geniuses Model Academy</div>
+      </a>
+      <nav>
+        <div class="nav-links">
+          <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="admissions.html"> Admissions</a>
+          <a href="academics.html">Academics</a>
+          <a href="news-and-media.html">News and Media</a>
+          <a href="student-life.html">Student Life</a>
+          <a href="faculty.html" class="cta">Faculty</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        </div>
+        <button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="sidebar-menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="sidebar-menu" class="sidebar-menu">
+    <button id="close-menu" class="close-btn" aria-label="Close menu">✕</button>
+    <nav class="menu-links">
+      <a href="index.html" class="menu-link">Home</a>
+      <a href="about.html" class="menu-link">About</a>
+      <a href="academics.html" class="menu-link">Academics</a>
+      <a href="admissions.html" class="menu-link">Admissions</a>
+      <a href="student-life.html" class="menu-link">Student Life</a>
+      <a href="faculty.html" class="menu-link">Faculty</a>
+      <a href="news-and-media.html" class="menu-link">News & Media</a>
+      <a href="news.html" class="menu-link">News</a>
+      <a href="contact.html" class="menu-link">Contact</a>
+    </nav>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="header" role="banner"></header>
+
+    <main class="container page-top">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+      
+      .page-hero { background: linear-gradient(135deg, #0a4f69 0%, #16a085 100%); color: white; padding: 80px 40px; text-align: center; animation: fadeIn 0.8s ease-in; }
+      .page-hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; }
+      .page-hero p { font-size: 1.3rem; opacity: 0.95; }
+      
+      .page-section { padding: 80px 40px; animation: fadeInUp 0.8s ease-in; }
+      .page-section h2 { font-size: 2.8rem; color: #0a4f69; margin-bottom: 15px; position: relative; display: inline-block; }
+      .page-section h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 2px; }
+      .page-section p { color: #555; font-size: 1.1rem; margin: 20px 0 30px; line-height: 1.7; }
+      
+      .faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+      .faculty-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; animation: fadeInUp 0.6s ease-in; }
+      .faculty-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+      
+      .faculty-header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px; text-align: center; font-size: 2.5rem; }
+      .faculty-body { padding: 25px; }
+      .faculty-body h4 { color: #0a4f69; font-size: 1.2rem; margin-bottom: 8px; }
+      .faculty-body p { color: #666; font-size: 0.9rem; line-height: 1.6; margin: 8px 0; }
+      .faculty-body .role { color: #999; font-size: 0.85rem; font-weight: 600; }
+      
+      .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
+      .stat-card { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center; transition: all 0.3s ease; }
+      .stat-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+      .stat-number { font-size: 2.5rem; font-weight: 700; color: #667eea; display: block; }
+      .stat-label { color: #666; font-size: 0.95rem; margin-top: 10px; }
+      
+      @media (max-width: 768px) { .page-hero { padding: 60px 20px; } .page-hero h1 { font-size: 2rem; } .page-section { padding: 50px 20px; } .faculty-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <section class="page-hero">
+      <h1>Faculty & Staff</h1>
+      <p>Meet our team of experienced scholars, practitioners, and dedicated mentors</p>
+    </section>
+
+    <section class="page-section">
+      <h2>Our Faculty & Staff</h2>
+      <p>Geniuses Model Academy employs 165+ certified educators and support staff dedicated to student success and institutional excellence.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">165+</span>
+          <span class="stat-label">Certified Educators</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Subject-Matter Qualified</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">25+</span>
+          <span class="stat-label">Advanced Degrees</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">International Educators</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));">
+      <h2>Distinguished Faculty</h2>
+      <p>Representative faculty members across key academic departments and support services.</p>
+      
+      <div class="faculty-grid">
+        <div class="faculty-card">
+          <div class="faculty-header">👨‍🏫</div>
+          <div class="faculty-body">
+            <h4>Dr. Adeyemi Okonkwo</h4>
+            <p class="role">Head of STEM Department</p>
+            <p>Ph.D. Physics, 18 years teaching experience. Research interests in physics education and innovation labs.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card">
+          <div class="faculty-header">👩‍🏫</div>
+          <div class="faculty-body">
+            <h4>Prof. Chioma Iwuji</h4>
+            <p class="role">Dean of Academics</p>
+            <p>M.A. Education, 22 years in academic leadership. Specializes in curriculum development and educational excellence.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card">
+          <div class="faculty-header">👨‍🎓</div>
+          <div class="faculty-body">
+            <h4>Mr. James Mukoro</h4>
+            <p class="role">Mathematics Department Lead</p>
+            <p>B.Sc. Mathematics, M.Ed. 14 years teaching. Coaching students for mathematics olympiads and competitions.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card">
+          <div class="faculty-header">👩‍🎨</div>
+          <div class="faculty-body">
+            <h4>Ms. Amara Mensah</h4>
+            <p class="role">Arts & Humanities Director</p>
+            <p>M.F.A. Fine Arts, 12 years experience. Leads creative programs in visual arts, literature, and performing arts.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card">
+          <div class="faculty-header">🏥</div>
+          <div class="faculty-body">
+            <h4>Dr. Sarah Thompson</h4>
+            <p class="role">Head Counselor & Wellness</p>
+            <p>M.Sc. Psychology, 10 years in student counseling. Oversees mental health and student wellness programs.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card">
+          <div class="faculty-header">💼</div>
+          <div class="faculty-body">
+            <h4>Mr. David Mensah</h4>
+            <p class="role">Admissions Director</p>
+            <p>M.A. Educational Administration, 8 years in admissions. Guides prospective students through application process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <h2>Faculty Excellence & Development</h2>
+      <p>Our commitment to continuous improvement includes regular professional development and research opportunities.</p>
+      
+      <div class="faculty-grid" style="margin-top: 50px;">
+        <div class="faculty-card" style="border-left: 5px solid #667eea;">
+          <div style="padding: 25px;">
+            <h4>Professional Development</h4>
+            <p>Annual training programs, international conferences, advanced degree opportunities, and certification courses.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card" style="border-left: 5px solid #764ba2;">
+          <div style="padding: 25px;">
+            <h4>Research & Innovation</h4>
+            <p>Faculty engaged in academic research, publication, and innovation projects with student collaboration.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card" style="border-left: 5px solid #667eea;">
+          <div style="padding: 25px;">
+            <h4>Mentorship Programs</h4>
+            <p>Formal mentoring relationships between senior and junior faculty, fostering knowledge sharing and growth.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card" style="border-left: 5px solid #764ba2;">
+          <div style="padding: 25px;">
+            <h4>Collaborative Culture</h4>
+            <p>Interdisciplinary projects, team teaching initiatives, and shared governance in academic decision-making.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card" style="border-left: 5px solid #667eea;">
+          <div style="padding: 25px;">
+            <h4>Teaching Excellence Awards</h4>
+            <p>Annual recognition of outstanding teaching, innovation, and student impact through prestigious awards.</p>
+          </div>
+        </div>
+        
+        <div class="faculty-card" style="border-left: 5px solid #764ba2;">
+          <div style="padding: 25px;">
+            <h4>Work-Life Balance</h4>
+            <p>Flexible schedules, wellness programs, and supportive environment valuing faculty well-being.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-section">
+            <h3>About Academy</h3>
+            <p>Geniuses Model Academy is an academically rigorous preparatory school committed to nurturing curiosity, creativity, and leadership in every student.</p>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><img src="images/x.svg" alt="X (Twitter)"></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="news-and-media.html">News and Media</a></li>
+              <li><a href="student-life.html">Student Life</a></li>
+              <li><a href="faculty.html">Faculty & Staff</a></li>
+              <li><a href="news.html">News & Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Academic Programs -->
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="academics.html#stem">STEM</a></li>
+              <li><a href="academics.html#arts">Arts & Humanities</a></li>
+              <li><a href="academics.html#entrepreneurship">Entrepreneurship</a></li>
+              <li><a href="academics.html#research">Student Research</a></li>
+              <li><a href="academics.html#lab">Innovation Lab</a></li>
+              <li><a href="academics.html#internships">Internships</a></li>
+              <li><a href="academics.html#abroad">Study Abroad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact & Connect -->
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <div class="contact-info">
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 12c-6.6 0-12 5.4-12 12 0 10 12 20 12 20s12-10 12-20c0-6.6-5.4-12-12-12zm0 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/></svg><span>123 Academy Lane, Education City, ST 12345, USA</span></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M36 12h-5.5l-2.5-3h-5l-2.5 3H12c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V14c0-1.1-.9-2-2-2zm-12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg><a href="tel:+1234567890" style="color:rgba(255,255,255,0.8);text-decoration:none">(123) 456-7890</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M8 8h32c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4zm16 13l-12-8v0h24l-12 8z" fill-rule="evenodd"/><path d="M8 11l12 8 12-8" fill="none" stroke="#fff" stroke-width="2"/></svg><a href="mailto:info@geniusesacademy.edu" style="color:rgba(255,255,255,0.8);text-decoration:none">info@geniusesacademy.edu</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 2C12.95 2 4 10.95 4 22c0 3.8.9 7.4 2.4 10.6.15.35.1.75-.15 1.05l-3 5.4c-.75 1.35.15 2.85 1.65 2.85.4 0 .8-.1 1.2-.3l5.4-3c.35-.25.8-.3 1.2-.15C15.1 42.1 19.4 43 24 43c11.05 0 20-8.95 20-20S35.05 2 24 2zm10.5 20c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg><a href="https://wa.me/1234567890" target="_blank" style="color:rgba(255,255,255,0.8);text-decoration:none">WhatsApp Chat</a></div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get updates on admissions, events, and achievements.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!')">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Geniuses Model Academy. All rights reserved. | "Inspire Curiosity. Build Character. Transform Futures."</p>
+          <div class="footer-bottom-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ac70a17b5553192276c90f/1jdtt9fhn';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b66ff"/>
+      <stop offset="1" stop-color="#084ecf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <text x="80" y="220" font-family="Inter,Arial" font-size="56" fill="#fff">Welcome to Geniuses Model Academy</text>
+  <text x="80" y="300" font-family="Inter,Arial" font-size="28" fill="#e6f0ff">A place for inquiry, innovation, and leadership</text>
+</svg>

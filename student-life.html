@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Life — Geniuses Model Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="Geniuses Model Academy home">
+        <img src="./images/GMA logo.png" alt="logo" style="height:60px;width:100px"/>
+        <div class="site-title">Geniuses Model Academy</div>
+      </a>
+      <nav>
+        <div class="nav-links">
+                   <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="admissions.html"> Admissions</a>
+          <a href="academics.html">Academics</a>
+          <a href="news-and-media.html">News and Media</a>
+          <a href="student-life.html" class="cta">Student Life</a>
+          <a href="faculty.html">Faculty</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-top">
+    <style>
+      /* Student Life Page Styles */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .hero-section {
+        background: linear-gradient(135deg, #0a4f69 0%, #16a085 100%);
+        color: white;
+        padding: 80px 40px;
+        text-align: center;
+        animation: fadeIn 0.8s ease-in;
+      }
+      
+      .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .hero-section p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      
+      .section {
+        padding: 80px 40px;
+        animation: fadeInUp 0.8s ease-in;
+      }
+      
+      .section h2 {
+        font-size: 2.8rem;
+        color: #0a4f69;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .section h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        border-radius: 2px;
+      }
+      
+      .section p {
+        color: #555;
+        font-size: 1.1rem;
+        margin: 20px 0 30px;
+        line-height: 1.7;
+      }
+      
+      /* Philosophy Cards */
+      .philosophy-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+      
+      .philosophy-card {
+        background: white;
+        border-radius: 12px;
+        padding: 35px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: fadeInUp 0.6s ease-in;
+      }
+      
+      .philosophy-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      }
+      
+      .philosophy-card h3 {
+        color: #0a4f69;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .philosophy-card::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+      
+      .philosophy-card p {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      /* Clubs Carousel */
+      .carousel-container {
+        position: relative;
+        margin-top: 50px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 40px 20px;
+        overflow: hidden;
+      }
+      
+      .carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        animation: fadeInUp 0.8s ease-in;
+      }
+      
+      .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+      }
+      
+      .carousel-btn {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+      }
+      
+      .carousel-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+      }
+      
+      .carousel-btn:active {
+        transform: translateY(0);
+      }
+      
+      /* Club Card */
+      .club-card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border-left: 5px solid #667eea;
+        animation: scaleIn 0.5s ease-in;
+      }
+      
+      .club-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        border-left-color: #764ba2;
+      }
+      
+      .club-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+      
+      .club-card h4 {
+        color: #0a4f69;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      
+      .club-card p {
+        color: #999;
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      
+      /* Filter Buttons */
+      .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 40px;
+        justify-content: center;
+      }
+      
+      .filter-btn {
+        background: white;
+        color: #0a4f69;
+        border: 2px solid #e0e0e0;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+      }
+      
+      .filter-btn:hover {
+        border-color: #667eea;
+        color: #667eea;
+      }
+      
+      .filter-btn.active {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border-color: #667eea;
+      }
+      
+      /* Sports Grid */
+      .sports-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+      
+      .sports-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .sports-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      }
+      
+      .sports-header {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 30px;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      
+      .sports-content {
+        padding: 25px;
+      }
+      
+      .sports-content h4 {
+        color: #0a4f69;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+      
+      .sports-content ul {
+        list-style: none;
+      }
+      
+      .sports-content li {
+        color: #666;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.95rem;
+      }
+      
+      .sports-content li:last-child {
+        border-bottom: none;
+      }
+      
+      .sports-content li::before {
+        content: '⚽ ';
+        color: #667eea;
+        margin-right: 8px;
+      }
+      
+      /* Achievements Grid */
+      .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 50px;
+      }
+      
+      .achievement-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .achievement-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+      }
+      
+      .achievement-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      }
+      
+      .achievement-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+      
+      .achievement-card h4 {
+        color: #0a4f69;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+      
+      .achievement-card p {
+        color: #888;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      /* Service Cards */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+      
+      .service-card {
+        background: white;
+        border-radius: 12px;
+        padding: 35px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      }
+      
+      .service-icon {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+      }
+      
+      .service-card h4 {
+        color: #0a4f69;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+      }
+      
+      .service-card p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      /* Leadership Programs */
+      .leadership-timeline {
+        position: relative;
+        margin-top: 50px;
+        padding: 40px 0;
+      }
+      
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+        align-items: center;
+        animation: fadeInUp 0.8s ease-in;
+      }
+      
+      .timeline-item:nth-child(even) {
+        grid-template-columns: 1fr 1fr;
+        direction: rtl;
+      }
+      
+      .timeline-content {
+        direction: ltr;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        border-left: 5px solid #667eea;
+      }
+      
+      .timeline-content h4 {
+        color: #0a4f69;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+      
+      .timeline-content p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      .timeline-visual {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 12px;
+        padding: 40px;
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+      }
+      
+      /* Engagement Cards */
+      .engagement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 50px;
+      }
+      
+      .engagement-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+      
+      .engagement-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      }
+      
+      .engagement-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      
+      .engagement-card h4 {
+        color: #0a4f69;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      
+      .engagement-card p {
+        color: #888;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      /* CTA Buttons */
+      .cta-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 15px 35px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 20px;
+      }
+      
+      .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+      }
+      
+      .cta-btn:active {
+        transform: translateY(-1px);
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+        
+        .hero-section p {
+          font-size: 1rem;
+        }
+        
+        .section {
+          padding: 50px 20px;
+        }
+        
+        .section h2 {
+          font-size: 2rem;
+        }
+        
+        .philosophy-grid, .sports-grid, .achievements-grid, .services-grid, .engagement-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        
+        .carousel {
+          grid-template-columns: 1fr;
+        }
+        
+        .timeline-item, .timeline-item:nth-child(even) {
+          grid-template-columns: 1fr;
+          direction: ltr;
+        }
+        
+        .timeline-content {
+          order: 2;
+        }
+        
+        .timeline-visual {
+          order: 1;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>Student Life at Geniuses Model Academy</h1>
+      <p>Where students thrive academically, athletically, creatively, and personally. A holistic approach to education that develops well-rounded global citizens.</p>
+    </section>
+
+    <!-- 5.1 Student Development Philosophy -->
+    <section class="section">
+      <h2>Student Development Philosophy</h2>
+      <p>We believe in nurturing the whole child through our comprehensive education model that emphasizes character, leadership, and personal growth.</p>
+      
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <h3>Whole-Child Education</h3>
+          <p>We focus on developing academic excellence alongside emotional, social, and physical wellbeing for balanced growth.</p>
+        </div>
+        <div class="philosophy-card">
+          <h3>Character Education</h3>
+          <p>Building strong values, integrity, and ethical decision-making through mentoring and experiential learning.</p>
+        </div>
+        <div class="philosophy-card">
+          <h3>Leadership Development</h3>
+          <p>Cultivating leaders who take civic responsibility seriously and contribute meaningfully to society.</p>
+        </div>
+        <div class="philosophy-card">
+          <h3>Emotional Intelligence</h3>
+          <p>Fostering self-awareness, empathy, and interpersonal skills essential for personal and professional success.</p>
+        </div>
+        <div class="philosophy-card">
+          <h3>Student Rights & Responsibilities</h3>
+          <p>Creating a fair, safe environment where students understand their rights and embrace their responsibilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.2 Clubs & Organizations -->
+    <section class="section">
+      <h2>Clubs, Societies & Organizations</h2>
+      <p>Join over 50 student-led clubs and societies where your passions come alive. Lead, learn, and grow with peers who share your interests.</p>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Clubs</button>
+        <button class="filter-btn" data-filter="academic">Academic</button>
+        <button class="filter-btn" data-filter="creative">Creative</button>
+        <button class="filter-btn" data-filter="leadership">Leadership</button>
+      </div>
+      
+      <div class="carousel-container">
+        <div class="carousel" id="clubsCarousel">
+          <div class="club-card" data-category="academic">
+            <div class="club-icon">🔬</div>
+            <h4>Science & Technology Club</h4>
+            <p>Explore research, experiments, and innovation in STEM fields</p>
+          </div>
+          <div class="club-card" data-category="academic">
+            <div class="club-icon">🔢</div>
+            <h4>Mathematics Club</h4>
+            <p>Problem-solving challenges and mathematical olympiad preparation</p>
+          </div>
+          <div class="club-card" data-category="academic">
+            <div class="club-icon">📚</div>
+            <h4>Literary & Debate Society</h4>
+            <p>Develop communication skills through literature and spirited debates</p>
+          </div>
+          <div class="club-card" data-category="academic">
+            <div class="club-icon">💻</div>
+            <h4>Coding & Robotics Club</h4>
+            <p>Build, code, and compete in robotics championships</p>
+          </div>
+          <div class="club-card" data-category="academic">
+            <div class="club-icon">🚀</div>
+            <h4>STEM Innovation Society</h4>
+            <p>Cutting-edge projects bridging science, technology, and entrepreneurship</p>
+          </div>
+          <div class="club-card" data-category="creative">
+            <div class="club-icon">🎵</div>
+            <h4>Music & Choir</h4>
+            <p>Perform in concerts and cultural events throughout the year</p>
+          </div>
+          <div class="club-card" data-category="creative">
+            <div class="club-icon">🎭</div>
+            <h4>Drama & Performing Arts</h4>
+            <p>Stage productions, improv, and theatrical performances</p>
+          </div>
+          <div class="club-card" data-category="creative">
+            <div class="club-icon">🎨</div>
+            <h4>Fine Arts & Design</h4>
+            <p>Express creativity through painting, sculpture, and digital art</p>
+          </div>
+          <div class="club-card" data-category="creative">
+            <div class="club-icon">📸</div>
+            <h4>Photography & Media Club</h4>
+            <p>Capture moments and create compelling visual stories</p>
+          </div>
+          <div class="club-card" data-category="leadership">
+            <div class="club-icon">👥</div>
+            <h4>Student Council</h4>
+            <p>Lead initiatives, represent student interests, organize events</p>
+          </div>
+          <div class="club-card" data-category="leadership">
+            <div class="club-icon">🤝</div>
+            <h4>Peer Mentorship Program</h4>
+            <p>Guide fellow students and foster a supportive community</p>
+          </div>
+          <div class="club-card" data-category="leadership">
+            <div class="club-icon">❤️</div>
+            <h4>Community Service Club</h4>
+            <p>Make a difference through volunteering and social initiatives</p>
+          </div>
+          <div class="club-card" data-category="leadership">
+            <div class="club-icon">🌱</div>
+            <h4>Environmental & Sustainability</h4>
+            <p>Champion sustainability and environmental conservation efforts</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="scrollCarousel('left')">← Previous</button>
+        <button class="carousel-btn" onclick="scrollCarousel('right')">Next →</button>
+      </div>
+    </section>
+
+    <!-- 5.3 Sports & Athletics -->
+    <section class="section">
+      <h2>Sports & Athletics Program</h2>
+      <p>Compete, excel, and develop teamwork through our comprehensive athletics program featuring multiple sports and competitive levels.</p>
+      
+      <div class="sports-grid">
+        <div class="sports-card">
+          <div class="sports-header">⚽</div>
+          <div class="sports-content">
+            <h4>Football</h4>
+            <ul>
+              <li>Inter-school tournaments</li>
+              <li>Intramural competitions</li>
+              <li>Professional coaching</li>
+              <li>State-level tournaments</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sports-card">
+          <div class="sports-header">🏀</div>
+          <div class="sports-content">
+            <h4>Basketball</h4>
+            <ul>
+              <li>Competitive leagues</li>
+              <li>Skills development</li>
+              <li>Regional tournaments</li>
+              <li>Coaching staff support</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sports-card">
+          <div class="sports-header">🏐</div>
+          <div class="sports-content">
+            <h4>Volleyball</h4>
+            <ul>
+              <li>Team competitions</li>
+              <li>Training sessions</li>
+              <li>Championship participation</li>
+              <li>Fitness programs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sports-card">
+          <div class="sports-header">🏃</div>
+          <div class="sports-content">
+            <h4>Athletics & Track</h4>
+            <ul>
+              <li>Distance & sprint events</li>
+              <li>Field events</li>
+              <li>Regional competitions</li>
+              <li>Performance analytics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sports-card">
+          <div class="sports-header">💪</div>
+          <div class="sports-content">
+            <h4>Fitness & Wellness</h4>
+            <ul>
+              <li>Strength training</li>
+              <li>Yoga & mindfulness</li>
+              <li>Nutrition guidance</li>
+              <li>Holistic health</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sports-card">
+          <div class="sports-header">🏆</div>
+          <div class="sports-content">
+            <h4>Athletic Development</h4>
+            <ul>
+              <li>Expert coaching staff</li>
+              <li>Performance tracking</li>
+              <li>Injury prevention</li>
+              <li>Safety protocols</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.4 Arts, Culture & Creativity -->
+    <section class="section">
+      <h2>Arts, Culture & Creativity</h2>
+      <p>Celebrate artistic expression through festivals, showcases, exhibitions, and productions that showcase student talent.</p>
+      
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">🎪</div>
+          <h4>Annual Cultural Festival</h4>
+          <p>A vibrant celebration of diverse cultures, traditions, and creative expressions from across our global community</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">⭐</div>
+          <h4>Talent Showcases</h4>
+          <p>Students perform their talents on stage—music, dance, comedy, and multimedia presentations</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🎨</div>
+          <h4>Creative Exhibitions</h4>
+          <p>Gallery spaces showcasing visual arts, digital creations, and innovative design projects</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🎬</div>
+          <h4>Music & Theatre Productions</h4>
+          <p>Full-scale musicals, plays, and concert productions featuring talented student performers</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🌍</div>
+          <h4>Cultural Exchange</h4>
+          <p>International programs connecting students with diverse cultures and artistic traditions</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.5 Leadership & Personal Growth -->
+    <section class="section">
+      <h2>Leadership & Personal Growth Programs</h2>
+      <p>Develop essential leadership skills and discover your potential through structured programs and mentoring.</p>
+      
+      <div class="leadership-timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Student Government & Prefect System</h4>
+            <p>Run for leadership positions, make decisions affecting school life, and represent your peers with responsibility and vision.</p>
+          </div>
+          <div class="timeline-visual">👔</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Leadership Training Seminars</h4>
+            <p>Intensive workshops on decision-making, conflict resolution, team management, and strategic thinking.</p>
+          </div>
+          <div class="timeline-visual">📖</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Public Speaking & Debate Forums</h4>
+            <p>Master the art of persuasion, articulate your ideas confidently, and engage in meaningful intellectual discourse.</p>
+          </div>
+          <div class="timeline-visual">🎤</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Entrepreneurship & Innovation Labs</h4>
+            <p>Develop business ideas, create startups, and learn real-world entrepreneurial skills from mentors and industry leaders.</p>
+          </div>
+          <div class="timeline-visual">💼</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Career Discovery Programs</h4>
+            <p>Explore diverse career paths through internships, mentorships, and industry interactions with professionals.</p>
+          </div>
+          <div class="timeline-visual">🚀</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.6 Guidance, Counseling & Wellbeing -->
+    <section class="section">
+      <h2>Guidance, Counseling & Wellbeing</h2>
+      <p>Your mental health and academic success matter. Our comprehensive support services are here for you.</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📚</div>
+          <h4>Academic Counseling</h4>
+          <p>Expert guidance on course selection, study strategies, and academic performance improvement plans.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h4>Career Guidance Services</h4>
+          <p>Personalized counseling on university selection, career planning, and professional development.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💭</div>
+          <h4>Psychological & Emotional Support</h4>
+          <p>Confidential counseling for stress, anxiety, relationships, and personal challenges.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <h4>Peer Support Systems</h4>
+          <p>Learn from student mentors who understand your experiences and challenges.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h4>Anti-Bullying & Safety</h4>
+          <p>Zero-tolerance bullying policy with trained staff and safe reporting mechanisms.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💚</div>
+          <h4>Mental Health Initiatives</h4>
+          <p>Awareness campaigns, wellness workshops, and resources for emotional wellbeing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.7 Student Services & Daily Life -->
+    <section class="section">
+      <h2>Student Services & Daily Life</h2>
+      <p>Comprehensive support services ensuring student comfort, health, and safety on campus.</p>
+      
+      <div class="engagement-grid">
+        <div class="engagement-card">
+          <div class="engagement-icon">⚕️</div>
+          <h4>Health Services & School Clinic</h4>
+          <p>Professional medical staff available for health concerns, first aid, and wellness education.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">🍽️</div>
+          <h4>Cafeteria & Nutrition Programs</h4>
+          <p>Balanced meal plans, vegetarian options, and nutritional guidance for healthy eating.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">🚐</div>
+          <h4>Transport & Logistics Services</h4>
+          <p>Safe, reliable transportation with professional drivers and modern fleet.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">🏨</div>
+          <h4>Hostel & Boarding Life</h4>
+          <p>Comfortable accommodations with 24/7 supervision, creating a home-like environment.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">👕</div>
+          <h4>Uniform & Supply Management</h4>
+          <p>Quality school uniforms and academic supplies available through our convenient system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.8 Student Recognition & Achievements -->
+    <section class="section">
+      <h2>Student Recognition & Achievements</h2>
+      <p>We celebrate and recognize excellence across all dimensions of student life.</p>
+      
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">🏅</div>
+          <h4>Honor Roll Recognition</h4>
+          <p>Students achieving exceptional academic performance are celebrated and rewarded annually.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">⭐</div>
+          <h4>Academic Excellence Awards</h4>
+          <p>Recognition for outstanding performance in individual subjects and overall academics.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">👑</div>
+          <h4>Leadership Awards</h4>
+          <p>Honoring students who demonstrate exceptional leadership, integrity, and service to others.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🏆</div>
+          <h4>Sports & Cultural Achievements</h4>
+          <p>Recognizing excellence in athletics, arts, competitions, and cultural performances.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🎓</div>
+          <h4>Scholarships & Distinctions</h4>
+          <p>Merit-based scholarships and special recognitions for outstanding students.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.9 Student Voice & Engagement -->
+    <section class="section">
+      <h2>Student Voice & Engagement</h2>
+      <p>Your voice matters. We actively listen and respond to student feedback and ideas.</p>
+      
+      <div class="engagement-grid">
+        <div class="engagement-card">
+          <div class="engagement-icon">📝</div>
+          <h4>Student Feedback System</h4>
+          <p>Anonymous surveys and feedback mechanisms helping us continuously improve student experience.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">🎤</div>
+          <h4>Town Hall Meetings</h4>
+          <p>Open forums where students discuss concerns, ideas, and contribute to school decisions.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">💬</div>
+          <h4>Suggestion & Grievance Channels</h4>
+          <p>Easy-to-access mechanisms for submitting suggestions and addressing concerns confidentially.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">📰</div>
+          <h4>Student Publications & Media</h4>
+          <p>Student-run newspaper, magazine, and digital media platforms showcasing student creativity.</p>
+        </div>
+        <div class="engagement-card">
+          <div class="engagement-icon">📻</div>
+          <h4>School Radio & Media Platform</h4>
+          <p>Student-operated radio station and multimedia platform for news, entertainment, and announcements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.10 Community Engagement & Outreach -->
+    <section class="section">
+      <h2>Community Engagement & Outreach</h2>
+      <p>Making a difference beyond our campus through meaningful community partnerships and social impact initiatives.</p>
+      
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">🤲</div>
+          <h4>Community Service Projects</h4>
+          <p>Hands-on initiatives addressing local needs in education, health, environment, and social welfare.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🙋</div>
+          <h4>Volunteer Programs</h4>
+          <p>Structured volunteering opportunities at local organizations, orphanages, health centers, and shelters.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🌱</div>
+          <h4>Environmental Campaigns</h4>
+          <p>Tree-planting drives, waste management initiatives, and sustainability awareness programs.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">💪</div>
+          <h4>Social Impact Initiatives</h4>
+          <p>Student-led campaigns addressing poverty, education access, health, and social inequality.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🤝</div>
+          <h4>NGO & Institutional Partnerships</h4>
+          <p>Collaborations with local and international organizations amplifying our community impact.</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 50px;">
+        <button class="cta-btn" onclick="alert('Connect with our Community Service Team to get involved!')">Get Involved Today</button>
+      </div>
+    </section>
+
+    <script>
+      // Club Filter Functionality
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const clubCards = document.querySelectorAll('.club-card');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          clubCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+              card.style.animation = 'fadeInUp 0.6s ease-in';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Carousel Scroll Function
+      function scrollCarousel(direction) {
+        const carousel = document.getElementById('clubsCarousel');
+        const scrollAmount = 320;
+        
+        if (direction === 'left') {
+          carousel.parentElement.scrollLeft -= scrollAmount;
+        } else {
+          carousel.parentElement.scrollLeft += scrollAmount;
+        }
+      }
+    </script>
+
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- About -->
+          <div class="footer-section">
+            <h3>About Academy</h3>
+            <p>Geniuses Model Academy is an academically rigorous preparatory school committed to nurturing curiosity, creativity, and leadership in every student.</p>
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter"><img src="images/x.svg" alt="X (Twitter)"></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="academics.html">Academics</a></li>
+              <li><a href="departments.html">Departments</a></li>
+              <li><a href="student-life.html">Student Life</a></li>
+              <li><a href="faculty.html">Faculty & Staff</a></li>
+              <li><a href="news.html">News & Events</a></li>
+            </ul>
+          </div>
+
+          <!-- Academic Programs -->
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="academics.html#stem">STEM</a></li>
+              <li><a href="academics.html#arts">Arts & Humanities</a></li>
+              <li><a href="academics.html#entrepreneurship">Entrepreneurship</a></li>
+              <li><a href="academics.html#research">Student Research</a></li>
+              <li><a href="academics.html#lab">Innovation Lab</a></li>
+              <li><a href="academics.html#internships">Internships</a></li>
+              <li><a href="academics.html#abroad">Study Abroad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact & Connect -->
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <div class="contact-info">
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 12c-6.6 0-12 5.4-12 12 0 10 12 20 12 20s12-10 12-20c0-6.6-5.4-12-12-12zm0 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/></svg><span>123 Academy Lane, Education City, ST 12345, USA</span></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M36 12h-5.5l-2.5-3h-5l-2.5 3H12c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V14c0-1.1-.9-2-2-2zm-12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/></svg><a href="tel:+1234567890" style="color:rgba(255,255,255,0.8);text-decoration:none">(123) 456-7890</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M8 8h32c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4H8c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4zm16 13l-12-8v0h24l-12 8z" fill-rule="evenodd"/><path d="M8 11l12 8 12-8" fill="none" stroke="#fff" stroke-width="2"/></svg><a href="mailto:info@geniusesacademy.edu" style="color:rgba(255,255,255,0.8);text-decoration:none">info@geniusesacademy.edu</a></div>
+              <div class="contact-item"><svg width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="flex-shrink:0"><rect width="48" height="48" rx="6" fill="rgba(255,255,255,0.2)"/><path d="M24 2C12.95 2 4 10.95 4 22c0 3.8.9 7.4 2.4 10.6.15.35.1.75-.15 1.05l-3 5.4c-.75 1.35.15 2.85 1.65 2.85.4 0 .8-.1 1.2-.3l5.4-3c.35-.25.8-.3 1.2-.15C15.1 42.1 19.4 43 24 43c11.05 0 20-8.95 20-20S35.05 2 24 2zm10.5 20c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-6.5 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg><a href="https://wa.me/1234567890" target="_blank" style="color:rgba(255,255,255,0.8);text-decoration:none">WhatsApp Chat</a></div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get updates on admissions, events, and achievements.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!')">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2026 Geniuses Model Academy. All rights reserved. | "Inspire Curiosity. Build Character. Transform Futures."</p>
+          <div class="footer-bottom-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ac70a17b5553192276c90f/1jdtt9fhn';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>
